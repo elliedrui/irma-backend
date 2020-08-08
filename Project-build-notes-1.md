@@ -83,7 +83,7 @@
   ### Seed Data
 
 ```ruby
-  Member.create(name: 'wayne', admin_level: 1, password: "password")
+  Member.create(name: 'wayne', email: 'wayne@wayne.com', admin_level: 1, password: "password", uid: '')
   Persona.create(first_name: 'Alec', last_name: 'Simms', date_of_birth: "07-27-1985", sex: "male", race: "caucasion", member_id: 2, faction_id: 3)
   Faction.create(name: 'Los Santos Sheriffs Department', acronym: 'LSSD', type: 'GOV') #1
   Vehicle.create(plate_number: '831-TRF', make: 'Chevy', model: 'Silverado', color: 'blue', persona_id: 1)
