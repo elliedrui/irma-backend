@@ -9,3 +9,7 @@
 Member.create(name: 'wayne', email: 'wayne@wayne.com', admin_level: 0, password: "password", uid: '')
 Member.create(name: 'brendo', email: 'brendo@brendo.com', admin_level: 1, password: "password", uid: '')
 Member.create(name: 'fussler', email: 'fussler@fussler.com', admin_level: 2, password: "password", uid: '')
+
+Persona.create(first_name: 'Alec', last_name: 'Simms', dob: "07-27-1985", sex: "male", race: "caucasion", member_id: 1, faction_id: 3)
+Persona.create(first_name: 'Fred', last_name: 'Giguel', dob: "04-11-1975", sex: "male", race: "hispanic", member_id: 2, faction_id: '')
+Persona.create(first_name: 'Alec', last_name: 'Simms', dob: "07-27-1985", sex: "male", race: "caucasion", member_id: 3, faction_id: 5)
