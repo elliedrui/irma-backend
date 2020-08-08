@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  dob: 2020-08-08
+  sex: MyString
+  race: MyString
+  member_id: 1
+  faction_id: 1
+
+two:
+  first_name: MyString
+  last_name: MyString
+  dob: 2020-08-08
+  sex: MyString
+  race: MyString
+  member_id: 1
+  faction_id: 1
