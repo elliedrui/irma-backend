@@ -3,40 +3,45 @@
 
 ### Models
 - Member
-  -Name
-  -Admin Level
-  -Pword digest
+  - Name
+  - Admin Level
+  - Pword digest
+
 - Persona
-  -First Name
-  -Last name
-  -DOB
-  -Sex
-  -Race/Ethnicity
-  -member_id
-  -faction_id
--Guns
-  -Serial Number
-  -Model
-  -Description
-  -persona_id
--Addresses
-  -Street Name
-  -Street Number
-  -Type
-  -Has interior?
-  -persona_id
--Vehicles
-  -year
-  -Make
-  -Model
-  -color
-  -plate number
-  -persona_id
+  - First Name
+  - Last name
+  - DOB
+  - Sex
+  - Race/Ethnicity
+  - member_id
+  - faction_id
+
+- Guns
+  - Serial Number
+  - Model
+  - Description
+  - persona_id
+
+- Addresses
+  - Street Name
+  - Street Number
+  - Type
+  - Has interior?
+  - persona_id
+
+- Vehicles
+  - year
+  - Make
+  - Model
+  - color
+  - plate number
+  - persona_id
+
 -Factions
-  -Name
-  -Acronym
-  -Type: GOV/CIV/CRIME
-  
+  - Name
+  - Acronym
+  - Type: GOV/CIV/CRIME
+   
   ### Associations
   
   ```ruby
