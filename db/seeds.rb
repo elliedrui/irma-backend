@@ -17,3 +17,8 @@ Persona.create(first_name: 'Alec', last_name: 'Simms', dob: "07-27-1985", sex: "
 Gun.create(serial_number: '122abc', model: 'combat pistol', description: 'woodgrain handle, black metal', persona_id: 1)
 Gun.create(serial_number: '123abc', model: 'sns pistol', description: 'chrome', persona_id: 2)
 Gun.create(serial_number: '124abc', model: 'Heavy pistol', description: 'pearl handle, blued', persona_id: '')
+
+
+Address.create(street_name: 'fake st', street_number: '1234', zip_code: 90210, unit_type: 'apt', apt_number: 'B', has_interior?: true, persona_id: 1)
+Address.create(street_name: 'Gilberth Ave', street_number: '31234', zip_code: 92310, unit_type: 'house', apt_number: '', has_interior?: true, persona_id: 1)
+Address.create(street_name: 'Rombo st', street_number: '5', zip_code: 91009, unit_type: 'apt', apt_number: '1A', has_interior?: true, persona_id: 1)
