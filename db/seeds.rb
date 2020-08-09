@@ -13,3 +13,7 @@ Member.create(name: 'fussler', email: 'fussler@fussler.com', admin_level: 2, pas
 Persona.create(first_name: 'Alec', last_name: 'Simms', dob: "07-27-1985", sex: "male", race: "caucasion", member_id: 1, faction_id: 3)
 Persona.create(first_name: 'Fred', last_name: 'Giguel', dob: "04-11-1975", sex: "male", race: "hispanic", member_id: 2, faction_id: '')
 Persona.create(first_name: 'Alec', last_name: 'Simms', dob: "07-27-1985", sex: "male", race: "caucasion", member_id: 3, faction_id: 5)
+
+Gun.create(serial_number: '122abc', model: 'combat pistol', description: 'woodgrain handle, black metal', persona_id: 1)
+Gun.create(serial_number: '123abc', model: 'sns pistol', description: 'chrome', persona_id: 2)
+Gun.create(serial_number: '124abc', model: 'Heavy pistol', description: 'pearl handle, blued', persona_id: '')
