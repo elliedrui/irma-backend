@@ -96,6 +96,8 @@
   
 - Image Upload
 - Map display of ingame addresses on live-map
+- utilize admin level
+- utiilize foreign key indexing to speed up sql queries as per http://archive.is/i7SLO
 
 
   
