@@ -22,3 +22,7 @@ Gun.create(serial_number: '124abc', model: 'Heavy pistol', description: 'pearl h
 Address.create(street_name: 'fake st', street_number: '1234', zip_code: 90210, unit_type: 'apt', apt_number: 'B', has_interior?: true, persona_id: 1)
 Address.create(street_name: 'Gilberth Ave', street_number: '31234', zip_code: 92310, unit_type: 'house', apt_number: '', has_interior?: true, persona_id: 1)
 Address.create(street_name: 'Rombo st', street_number: '5', zip_code: 91009, unit_type: 'apt', apt_number: '1A', has_interior?: true, persona_id: 1)
+
+Vehicle.create(year: 1976, make: 'Ford', model: 'F250', color: 'green',plate_number: '049-TEO', persona_id: 1)
+Vehicle.create(year: 2020, make: 'Chevy', model: 'Silverado', color: 'blue',plate_number: '831-TRF', persona_id: 2)
+Vehicle.create(year: 1996, make: 'DeClasse', model: 'Huslter', color: 'Red',plate_number: 'PIMPIN', persona_id: 3)
