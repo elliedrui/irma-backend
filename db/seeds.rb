@@ -26,3 +26,8 @@ Address.create(street_name: 'Rombo st', street_number: '5', zip_code: 91009, uni
 Vehicle.create(year: 1976, make: 'Ford', model: 'F250', color: 'green',plate_number: '049-TEO', persona_id: 1)
 Vehicle.create(year: 2020, make: 'Chevy', model: 'Silverado', color: 'blue',plate_number: '831-TRF', persona_id: 2)
 Vehicle.create(year: 1996, make: 'DeClasse', model: 'Huslter', color: 'Red',plate_number: 'PIMPIN', persona_id: 3)
+
+Faction.create(name: 'Los Santos Sheriffs Department', acronym: 'LSSD', faction_type: 'GOV') #1
+Faction.create(name: 'Hustlers Crew', acronym: 'HSTL', faction_type: 'CRIME') #2
+Faction.create(name: 'General Taxi', acronym: 'Taxi', faction_type: 'CIV') #3
+
