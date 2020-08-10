@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_09_184913) do
+ActiveRecord::Schema.define(version: 2020_08_10_040938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,9 +22,10 @@ ActiveRecord::Schema.define(version: 2020_08_09_184913) do
     t.string "unit_type"
     t.string "apt_number"
     t.boolean "has_interior?"
-    t.integer "persona_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "persona_id"
+    t.index ["persona_id"], name: "index_addresses_on_persona_id"
   end
 
   create_table "factions", force: :cascade do |t|
@@ -39,9 +40,10 @@ ActiveRecord::Schema.define(version: 2020_08_09_184913) do
     t.string "serial_number"
     t.string "model"
     t.string "description"
-    t.integer "persona_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "persona_id"
+    t.index ["persona_id"], name: "index_guns_on_persona_id"
   end
 
   create_table "members", force: :cascade do |t|
@@ -60,10 +62,12 @@ ActiveRecord::Schema.define(version: 2020_08_09_184913) do
     t.date "dob"
     t.string "sex"
     t.string "race"
-    t.integer "member_id"
-    t.integer "faction_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "member_id"
+    t.bigint "faction_id"
+    t.index ["faction_id"], name: "index_personas_on_faction_id"
+    t.index ["member_id"], name: "index_personas_on_member_id"
   end
 
   create_table "vehicles", force: :cascade do |t|
@@ -72,9 +76,15 @@ ActiveRecord::Schema.define(version: 2020_08_09_184913) do
     t.string "model"
     t.string "color"
     t.string "plate_number"
-    t.integer "persona_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "persona_id"
+    t.index ["persona_id"], name: "index_vehicles_on_persona_id"
   end
 
+  add_foreign_key "addresses", "personas"
+  add_foreign_key "guns", "personas"
+  add_foreign_key "personas", "factions"
+  add_foreign_key "personas", "members"
+  add_foreign_key "vehicles", "personas"
 end
