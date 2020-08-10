@@ -2,13 +2,13 @@ class Api::V1::MembersController < ApplicationController
   
   def index
     members = Member.all
-    render json: members
+    render json: MemberSerializer.new(members)
   end
 
   def create
     member = Member.new(:name, :email, :admin_level, :password, :uid)
     if member.save
-      render json: member, status: :accepted
+      render json: MemberSerializer.new(member), status: :accepted
     else
       render json: {errors: member.errors.full_messages}, status: :unprocessible_entity
     end
