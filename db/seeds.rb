@@ -7,16 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Member.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('members')
 Faction.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('factions')
 Persona.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('personas')
 Gun.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('guns')
 Address.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('addresses')
 Vehicle.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('members')
+ActiveRecord::Base.connection.reset_pk_sequence!('factions')
+ActiveRecord::Base.connection.reset_pk_sequence!('personas')
+ActiveRecord::Base.connection.reset_pk_sequence!('guns')
+ActiveRecord::Base.connection.reset_pk_sequence!('addresses')
 ActiveRecord::Base.connection.reset_pk_sequence!('vehicles')
 
 
