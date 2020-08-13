@@ -1,4 +1,4 @@
-# READM
+# README
 
 This is the backend for Illender's Roleplay Management Application-inator, aka 'IRMA'.
 This api was written with this frontend located at:
