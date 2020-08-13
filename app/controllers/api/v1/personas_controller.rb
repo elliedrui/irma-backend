@@ -1,10 +1,10 @@
 class Api::V1::PersonasController < ApplicationController
 
   def index
-    options = {}
-    options[:include] = [:member, :'member.name']
+    
     personas = Persona.all
-    render json: PersonaSerializer.new(personas, options)
+   
+    render json: PersonaSerializer.new(personas)
   end
 
   def create
