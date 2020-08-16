@@ -6,11 +6,12 @@ class Api::V1::MembersController < ApplicationController
   end
 
   def create
-    member = Member.new(:name, :email, :admin_level, :password, :uid)
+    member = Member.create(member_params)
     if member.save
       render json: MemberSerializer.new(member), status: :accepted
     else
-      render json: {errors: member.errors.full_messages}, status: :unprocessible_entity
+      render json: {errors: member.errors.full_messages, status: :unprocessible_entity}
+      byebug
     end
 
   end
@@ -19,8 +20,8 @@ class Api::V1::MembersController < ApplicationController
 
   private
 
-  def member_params(*args)
-    params.require(:member).permit(*args)
+  def member_params
+    params.require(:member).permit(:name, :email, :admin_level, :password, :uid)
   end
 
 

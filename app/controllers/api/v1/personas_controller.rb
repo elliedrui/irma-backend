@@ -8,11 +8,11 @@ class Api::V1::PersonasController < ApplicationController
   end
 
   def create
-    persona = Persona.new(:first_name, :last_name, :dob, :sex, :race, :member, :faction)
+    persona = Persona.create(persona_params)
     if persona.save
       render json: PersonaSerializer.new(persona), status: :accepted
     else
-      render json: {errors: persona.errors.full_messages}, status: :unprocessible_entity
+      render json: {errors: persona.errors.full_messages, status: :unprocessible_entity}
     end
 
   end
@@ -21,8 +21,8 @@ class Api::V1::PersonasController < ApplicationController
 
   private
 
-  def persona_params(*args)
-    params.require(:persona).permit(*args)
+  def persona_params
+    params.require(:persona).permit(:first_name, :last_name, :dob, :sex, :race, :member_id, :faction_id)
   end
 
 end

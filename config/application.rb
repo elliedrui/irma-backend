@@ -24,25 +24,17 @@ module Irma
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    # config.middleware.insert_before 0, Rack::Cors do
-    #   allow do
-    #     origins '*'
-    #     resource '*',
-    #       :headers => :any,
-    #       :methods => [:get, :post, :delete, :put, :patch, :options, :head],
-    #       :max_age => 0
-    #   end
-    # end
 
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins '*'
-        resource '*',
-          :headers => :any,
-          :methods => [:get, :post, :delete, :put, :patch, :options, :head],
-          :max_age => 0
-      end
+  Rails.application.config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins 'http://127.0.0.1:5500'
+
+      resource '*',
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head]
     end
+  end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
