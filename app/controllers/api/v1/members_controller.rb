@@ -11,7 +11,7 @@ class Api::V1::MembersController < ApplicationController
       render json: MemberSerializer.new(member), status: :accepted
     else
       render json: {errors: member.errors.full_messages, status: :unprocessible_entity}
-      byebug
+      
     end
 
   end

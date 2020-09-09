@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :members, only: [:index, :create] do 
-        resources :personas, only: [:index, :create]
+        resources :personas, only: [:index, :create] do
+          resources :guns, only: [:index, :create]
+        end
       end
       resources :personas, only: [:index, :create]
+      resources :guns, only: [:index, :create]
     end
   end
 
