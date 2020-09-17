@@ -1,11 +1,16 @@
 class Api::V1::GunsController < ApplicationController
 
   def index
-    guns = Gun.where(:persona_id => [params[:persona_id]])
-    
-    render json: GunSerializer.new(guns)
-  
+    personaGuns = Gun.where(:persona_id => [params[:persona_id]])
+    guns = Gun.all
+    if personaGuns.length === 0
+      render json: GunSerializer.new(guns)
+    else
+      render json: GunSerializer.new(personaGuns)
+    end
+   
   end
+
 
 
   def create
