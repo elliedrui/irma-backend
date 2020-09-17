@@ -22,7 +22,7 @@ class Api::V1::PersonasController < ApplicationController
   private
 
   def persona_params
-    params.require(:persona).permit(:first_name, :last_name, :dob, :sex, :race, :member_id, :faction_id)
+    params.require(:persona).permit(:first_name, :last_name, :dob, :sex, :race, :member_id, :faction_id, :notes)
   end
 
 end
