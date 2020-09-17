@@ -5,10 +5,12 @@ Rails.application.routes.draw do
       resources :members, only: [:index, :create] do 
         resources :personas, only: [:index, :create] do
           resources :guns, only: [:index, :create]
+          resources :addresses, only: [:index, :create]
         end
       end
       resources :personas, only: [:index, :create]
       resources :guns, only: [:index, :create]
+      resources :addresses, only: [:index, :create]
     end
   end
 

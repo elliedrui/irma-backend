@@ -32,6 +32,7 @@ gem 'fast_jsonapi'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry', '~> 0.13.1'
 end
 
 group :development do
