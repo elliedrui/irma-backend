@@ -12,3 +12,10 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+# Parsed JSON body of the last request; re-parsed each call on purpose
+class ActionDispatch::IntegrationTest
+  def json
+    JSON.parse(response.body)
+  end
+end
