@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  serial_number: MyString
-  model: MyString
-  description: MyString
-  persona_id: 1
+combat:
+  serial_number: 122abc
+  model: 'combat pistol'
+  description: 'woodgrain handle, black metal'
+  persona: alec
 
-two:
-  serial_number: MyString
-  model: MyString
-  description: MyString
-  persona_id: 1
+sns:
+  serial_number: 123abc
+  model: 'sns pistol'
+  description: chrome
+  persona: alec

@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  acronym: MyString
-  faction_type: MyString
+taxi:
+  name: 'General Taxi'
+  acronym: TAXI
+  faction_type: CIV
 
-two:
-  name: MyString
-  acronym: MyString
-  faction_type: MyString
+hustlers:
+  name: 'Hustlers Crew'
+  acronym: HSTL
+  faction_type: CRIME
